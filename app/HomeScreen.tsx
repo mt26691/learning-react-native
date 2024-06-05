@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, Button, TouchableOpacity } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 export type RootStackParamList = {
@@ -9,11 +9,14 @@ export type RootStackParamList = {
 
 type HomeScreenProps = NativeStackScreenProps<RootStackParamList, 'Home'>;
 
-export default function HomeScreen({ navigation }: HomeScreenProps) {
+export default function HomeScreen({ navigation }: any) {
   return (
     <View>
-      <Text>Home Screen</Text>
       <Button title="Go to List" onPress={() => navigation.navigate('List')} />
+      <Button title="Go to Image" onPress={() => navigation.navigate('Image')} />
+      <TouchableOpacity onPress={() => navigation.navigate('List')}>
+        <Text>Go to list</Text>
+      </TouchableOpacity>
     </View>
   );
 }
