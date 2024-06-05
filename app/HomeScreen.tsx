@@ -14,6 +14,7 @@ export default function HomeScreen({ navigation }: any) {
     <View>
       <Button title="Go to List" onPress={() => navigation.navigate('List')} />
       <Button title="Go to Image" onPress={() => navigation.navigate('Image')} />
+      <Button title="Go to Counter" onPress={() => navigation.navigate('Counter')} />
       <TouchableOpacity onPress={() => navigation.navigate('List')}>
         <Text>Go to list</Text>
       </TouchableOpacity>

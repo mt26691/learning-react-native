@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './HomeScreen';
 import ListScreen from './ListScreen';
 import ImageScreen from './ImageScreen';
+import CounterScreen from './CounterScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,6 +20,7 @@ export default function RootLayout() {
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="List" component={ListScreen} />
         <Stack.Screen name="Image" component={ImageScreen} />
+        <Stack.Screen name="Counter" component={CounterScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
